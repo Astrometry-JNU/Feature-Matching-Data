@@ -1,0 +1,96 @@
+J/AJ/.../...      Astrometric observations of Phobos        (Lai+, 2026)
+================================================================================
+Automated Shape-Model-Based Astrometry of Phobos from
+    Mars Express SRC Images
+    Wang-Xing Lai, Qing-Feng Zhang, Rui Zhang
+================================================================================
+Keywords: Astrometry --- Ephemerides --- Martian satellites --- Astrodynamics
+          --- Astronomy image processing
+
+Abstract:
+    Mars Express (MEX) performed a series of Phobos flybys at distances ranging
+	from 50 to 5500 km, spanning an observational baseline from January 2007 to
+	December 2025. A total of 732 images were acquired by the Super Resolution
+	Channel (SRC), from which spacecraft-centered right ascension and 
+	declination of the Martian moon were determined across diverse orbital 
+	phases and illumination conditions.
+
+	Camera pointing were calibrated through background star observations 
+	cross-matched against the Gaia DR3 catalog. Positional measurements were 
+	obtained using FeatureMapping, a surface-feature-based astrometric technique 
+	that determines the center-of-figure location of Phobos by matching 
+	identified surface features against a reference control-point network and 
+	3D shape model.
+
+	Observed positions are compared against predicted ephemeris positions 
+    computed from JPL MAR099, the current best-fit solution for the Martian 
+    satellite system, which incorporates over a century of astrometric data 
+    from ground-based, spacecraft, and rover observations. Residuals between 
+    SRC-derived astrometry and MAR099 predictions are analyzed as a function 
+    of time, flyby geometry, and image quality to assess systematic trends 
+    and long-term ephemeris consistency.
+
+	In conclusion, the extended 2007--2025 baseline---the longest continuous
+	MEX-Phobos astrometric dataset to date---offers substantially improved
+	leverage for constraining Phobos' tidal dissipation parameters and 
+	secular orbital evolution. Residuals with respect to JPL MAR099 show 
+	standard deviations of 0.468 km in $\alpha\cos\delta$ and 0.501 km in 
+	$\delta$, with near-zero mean offsets of 0.009 km and 0.033 km, 
+	respectively, indicating good overall agreement while revealing residual 
+	systematics that may inform future ephemeris refinements. This dataset 
+	serves as a critical astrometric reference for the upcoming JAXA MMX 
+	mission (2029).
+
+Description:
+    The data is given in the form of table, This table contains 732 
+    astrometric positions of Phobos derived from Mars Express Super 
+    Resolution Channel (SRC) images spanning 2007-2025. Positions are 
+    given as spacecraft-centered right ascension, declination, and 
+    Phobos position vector in the International Celestial Reference 
+    Frame (ICRF).
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName             Lrecl  Records  Explanations
+--------------------------------------------------------------------------------
+ ReadMe                  80       90  This file
+ Table.dat              107      732  Astrometric observations of Phobos from
+                                       Mars Express SRC images (2007-2025)
+--------------------------------------------------------------------------------
+
+See also:
+ J/A+A/487/755 : CCD observations of Martian Satellites (Veiga+, 2008)
+ J/A+A/580/A28 : Astrometric observations of Phobos (Pasewaldt+, 2015)
+ J/A+A/650/A64 : Mars moon ephemerides after 14 years of Mars Express 
+				 data(Lainey+, 2021)
+
+Byte-by-byte Description of file: data.dat
+--------------------------------------------------------------------------------
+Bytes      Format Units   Label   Explanations
+--------------------------------------------------------------------------------
+   1- 10   A10    ---     Img     Image name
+  13- 22   A10    "Y-M-D" Date    Image date (UTC)
+  23       A1     ---     ---     [T]
+  24- 35   A12    "h:m:s" Time    Image mid-time (UTC)
+  36       A1     ---     ---     [Z]
+  39- 40   A2     ---     Meth    Measurement method (1)
+  47- 55   F9.4   deg     RAdeg   Right ascension in spacecraft-centered ICRF
+  58- 66   F9.4   deg     DEdeg   Declination in spacecraft-centered ICRF
+  69- 71   I3     ---     Np      [16/686] Number of matched feature points
+                                  retained after RANSAC filtering
+  74- 83   F10.2  km      Xpos    [-13446/10170] X-component of the Phobos 
+                                  position vector relative to Mars Express 
+                                  in the ICRF
+  86- 95   F10.2  km      Ypos    [-9044/10953] Y-component of the Phobos 
+                                  position vector relative to Mars Express 
+                                  in the ICRF
+  98-107   F10.2  km      Zpos    [-9635/14526] Z-component of the Phobos 
+                                  position vector relative to Mars Express 
+                                  in the ICRF
+--------------------------------------------------------------------------------
+Note (1): Measurement method: FM = Feature Matching
+--------------------------------------------------------------------------------
+Acknowledgements:
+		tqfz@jnu.edu.cn
+================================================================================
+(End)
